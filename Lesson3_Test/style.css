@@ -1,0 +1,28 @@
+body {
+    background-color: gray;
+}
+
+div{
+    width: 300px;
+    height: 300px;
+    margin: 30px;
+    display: flex; flex-direction: column;
+}
+
+.red {
+    background-color: red;
+    padding-left: 20px;
+    border-left: dotted black 10px;
+    order: 3;
+}
+.blue {
+    background-color: blue;
+    border-right: dotted black 10px;
+    order: 1;
+}
+
+.yellow {
+    background-color: yellow;
+    border-bottom   : dotted black 10px;
+    order: 3;
+}
