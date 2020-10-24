@@ -3,72 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binz</title>
+    <title>RRRRRAINBOW</title>
 </head>
 <style>
-    @font-face {
-        font-family: binz;
-        src: url(Road_Rage.otf);
-    }
-    @font-face {
-        font-family: flower;
-        src: url(Paper_Flowers.otf);
-    }
-    body{
-        text-align: center;
-        background-color: rgba(218,213,203,0.7);
-        font-family: Arial, Helvetica, sans-serif;
-    }
-    #heading1{
-        font-size: 60px;
-        font-family: binz;
-    }
-    img{
+    .box{
         height: 500px;
-        width: 400px;
-    }
-    div{
-        font-size: 25px;
-    }
-    h1{
-        font-family: flower;
-        font-size: 60px;
-
+        width: 500px;
+        background-color: red;
         
+    }
+    .box h1{
+        position: absolute;
+        top: 209px;
+        left: 160px;
+    }
 
-    }
-    a{
-        color:black;
-        text-decoration: none;
-    }
-    #mail{
-        position: fixed;
-    }
-</style> 
+    
+</style>
 <body>
-    <h1 id="heading1"> BINZ </h1>
-    <img src="images/binz1.jpg" alt="">
-    <img src="images/binz2.jpg" alt="">
-    <img src="images/binz3.jpg" alt="">
-    <h1> Introduction</h1>
-    <div class="intro">
-        <p>-Tên Thật: Lê Nguyễn Trung Đan </p>
-        <p>-Ngày Sinh: 24/5/1988</p>
-        <p>-Nickname: Binz Da Poet</p>
-        <p>-Thể Loại Nhạc: Rap</p>
-        <p>-Facebook: <a href="https://www.facebook.com/binz.le" target="_blank"> Đan Lê </a></p>
+<div class="all">
+    <div class="box">
+        <h1>RAINBOW</h1> 
     </div>
-    <h1 style="margin: 50px 600px 25px 600px; padding-top: 30px; border-top: dashed black 5px;"> Facts</h1>
-    <div>
-        <p>-Có chất giọng ngọt ngào</p>
-        <p>-Đẹp trai =))</p>
-        <p>-Chuyên thả thính trên Facebook</p>
-    </div>
-    <H1 style="margin: 50px 600px 25px 600px; padding-top: 30px; border-top: dashed black 5px;"> Popular  Songs</H1>
-    <iframe width="640" height="480" src="https://www.youtube.com/embed/hZFCidk6A_w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="640" height="480" src="https://www.youtube.com/embed/SiRn1ql-BBU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <iframe width="1280" height="554" src="https://www.youtube.com/embed/jgZkrA8E5do" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <p style="text-align: right; font-size: 15px;">idol em đó mn =]]</p>
-    <audio src="Ok - Binz.mp3"></audio>
-    <p id="mail"> Email: dothanhdat13@gmail.com</p>
 </body>
+<script>
+    var bg = document.querySelector('.box')
+    var colors = ["green" , "blue","red", "yellow", "purple", "pink", "orange"]
+    var i = 0;
+
+    function change(){
+        if(i >= colors.length) { i = 0; }
+        bg.style.backgroundColor = colors[i++]
+    }
+
+    var timer = setInterval(change,500);
+</script>
+</html>
