@@ -3,38 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RRRRRAINBOW</title>
+    <title>Function</title>
 </head>
 <style>
-    .box{
-        height: 500px;
-        width: 500px;
-        background-color: red;
-        
+    body{
+        background-color: rgb(171,240,209); 
     }
-    .box h1{
-        position: absolute;
-        top: 209px;
-        left: 160px;
+    button{
+        border: none;
+        color: white;
+        padding: 42px 24px;
+        text-align: center;
+        display: inline-block;
+        font-size: 17px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    #button1{
+        background-color: green;
+    }
+    #button2{
+        background-color: blue;
+    }
+    #button3{
+        background-color: orange;
+    }
+    #button4{
+        background-color: red;
+    }
+    #button5{
+        background-color: purple;
+    }
+    #button6{
+        background-color: pink;
     }
 
-    
 </style>
 <body>
-    <div class="box">
-        <h1>RAINBOW</h1> 
-    </div>
+    <button onclick="bangcuuchuong()" id="button1">Bảng Cửu Chương</button>
+    <button onclick="ptbac1()" id="button2">Phương trình bậc 1</button>
+    <button onclick="ptbac2()" id="button3">Phương trình bậc 2</button>
+    <button onclick="dientichhcn()" id="button4">Diện tích hình chữ nhật</button>
+    <button onclick="dientichhv()" id="button5">Diện tích hình vuông</button>
+    <button onclick="checktuoi()" id="button6">Kiểm tra tuổi</button>
+
 </body>
 <script>
-    var bg = document.querySelector('.box')
-    var colors = ["green" , "blue","red", "yellow", "purple", "pink", "orange"]
-    var i = 0;
-
-    function change(){
-        if(i >= colors.length) { i = 0; }
-        bg.style.backgroundColor = colors[i++]
+    function bangcuuchuong(){
+        var a = prompt("Hay Nhap 1 So Gi Do");
+    
+        for (var i=1 ;i <= 10; i++){
+        console.log(a + '*'+ i + '=' + a*i  );
+        }
+        alert('Check Console Di');
     }
+    function ptbac1(){
+        var a = prompt("Hay Nhap A");
+        var b = prompt("Hay Nhap B");
+        var x = 0;
+        var y = 0;
 
-    var timer = setInterval(change,500);
+        if (a == 0) {
+        alert('Phương trình vô nghiệm' );
+        }
+        else if (b == 0){
+        alert('Phương trình có nghiệm là 0');
+        }
+        else {
+        x = (b *(-1)) / a;
+        alert("Phương trình có nghiệm là "+x);
+        }
+    }
+    function ptbac2(){
+        var a = prompt("Hay Nhap A");
+        var b = prompt("Hay Nhap B");
+        var c = prompt("Hay Nhap C");
+        var x = 0;
+        var y = 0;
+
+        if (a == 0){
+            if (b == 0) {
+            alert('Phương trình vô nghiệm' );
+        }
+        else if (c == 0){
+            alert('0');
+        }
+        else {
+            x = (c *(-1)) / b;
+            alert("Phương trình có nghiệm là "+x);
+        }
+        }
+
+        
+        else {
+            var delta = b*b - (4*a*c);
+            if (delta > 0){
+                x = ((b*(-1))+ Math.sqrt(delta)) / (2*a);
+                y = ((b*(-1))- Math.sqrt(delta)) / (2*a);
+                alert("x1 = " + x + "\nx2 = " + y);
+            }
+            if (delta < 0){
+                alert('Phương trình vô nghiệm')
+            }
+            if (delta == 0){
+                x = (b*(-1)) / (2*a);
+                alert ("x = " + x);
+            }
+        }
+    }
+    function dientichhcn(){
+        var a = prompt("Hay nhap chieu dai (cm)");
+        var b = prompt("Hay nhap chieu rong (cm)");
+
+        alert('Dien tich hinh chu nhat la ' + a*b + ' cm');
+    }
+    function dientichhv(){
+        var a = prompt("Hay nhap do dai canh (cm)");
+
+        alert('Dien tich hinh vuong la ' + a*a + ' cm');
+    }
+    function checktuoi(){
+        var a = prompt("Hay nhap tuoi cua ban ");
+
+        if (a >= 18){
+            alert('Ban da du tuoi de vao trang web');
+        }
+        else{
+            alert('Ban chua du tuoi de vao trang web');
+        }
+    }
 </script>
 </html>
